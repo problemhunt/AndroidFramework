@@ -1,0 +1,90 @@
+1. Introduction to Android
+ Android overall architecture
+ Android Open Source Project (AOSP)
+ Embedded Linux fundamentals
+ Android Stack Module
+ Android Kernel Layer
+ Android Native Layer
+ Android Application Framework Layer
+ Android Applications Layer
+2. Getting and building the code from the Android Open Source Project
+ Setting up an Android build system
+ Obtaining the Android source tree
+ The Android build system and an introduction to device configuration files
+ Selecting the target product and build variant
+ Building Android system images from source
+ Running custom Android images on emulators
+3. The Android kernel: differences from mainline Linux
+ Where to find the source for Android’s custom kernel
+ Binder: Android’s primary inter-process communication (IPC) mechanism
+ Anonymous shared memory (ashmem): Android’s replacement for POSIX SHM
+ Android’s physical memory allocator, ION
+ Android power management extensions: wakelocks, early suspend, and alarms
+ Android’s low-memory process killer
+ The Android logging system
+ Android’s user and group management and kernel security enforcement (the “paranoid network security” kernel option)
+4. Applications in Android
+ First look
+ Anatomy of an application
+ Native code
+ Activities
+ Lifecycle Management
+ User interface essentials
+ Manifest File
+ Resources
+ Services
+ Intents
+5. Boot Loader and fastboot
+6. Android Inter-Process Communication (IPC) with Binder and AIDL
+ Overview of Binder and its capabilities
+ Higher-level Android IPC mechanisms based on Binder
+ Binder communication and service discovery
+ Generating Binder-based service interfaces in Java using Android
+7. Interface Definition Language (AIDL)
+ Creating custom Parcelable Java types for use with Binder
+ Exposing a Binder-based interface from an application
+ Asynchronous Binder interactions
+8. Starting up: the Android init process and init.rc scripts
+ Bootloading the kernel
+ The init process and Android’s init scripting language
+ The standard boot process and how to customize it
+ The purpose of the Zygote daemon
+ Startup of system services
+9. Android’s hardware abstraction layer
+ Android application structure
+ Standard Android system applications, wallpapers, and input method editors
+10. Android Native Layer
+ Bionic: Android’s implementation of libc and how it differs from the BSD libc
+ User-space Hardware Abstraction Layer (HAL): standard APIs for accessing hardware
+ Overview of standard Android native daemons (e.g., adbd, rild, ueventd, etc.) and their purpose
+ Overview of other Android function libraries and frameworks
+ The Dalvik Virtual Machine (VM) and how it differs from a Java VM
+11. Accessing native (C/C++) code from an Android application
+ JNI development process overview
+ Implementing Java methods in native code
+ Mapping Java types to native types
+ Managing object references in native code
+ Managing Strings, arrays, and other Java object types in native code
+ Throwing and catching exceptions in native code
+ Using NDK to incorporate native code in an app
+ Supporting multiple machine architectures with NDK
+ NDK “stable” APIs
+12. Android Subsystems
+ Vibrator
+ Power Service
+ Alarm Service
+ Package Service
+ WiFi Service
+ Location Service
+ Android Media Framework
+ Telephony
+13. Creating a Customized Android System Image
+ Setting up a custom device directory structure
+ Registering a custom device with Android’s build system
+ Adding the Makefile plumbing for a device
+ Generating platform signing keys
+ Adding a custom kernel
+ Adding a custom native library and executable
+ Adding a custom daemon
+ Creating a custom Java library to expose a native library
+ Consuming a custom Java/JNI library via a custom application
